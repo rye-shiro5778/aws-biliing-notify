@@ -13,7 +13,7 @@ export const handler = async () => {
     let message: string;
     try {
         const { dateRange, totalBlendedCost, totalUnblendedCost } = await fetchBilling();
-        message = `${dateRange}のAWSコスト通知\nブレンドコスト：${totalBlendedCost}ドル\n非ブレンドコスト:${totalUnblendedCost}ドル`;
+        message = `${dateRange}のAWSコスト通知\nブレンドコスト：${totalBlendedCost}ドル\n非ブレンドコスト：${totalUnblendedCost}ドル`;
     } catch (err) {
         console.log(err);
         message = "今週のAWSコスト通知の取得に失敗しました、、";
