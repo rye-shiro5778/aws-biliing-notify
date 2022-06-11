@@ -24,7 +24,10 @@
     "dotenv"
   ],
   "dependencies": {
+    "@aws-sdk/client-cost-explorer": "^3.106.0",
+    "aws-sdk": "^2.1152.0",
     "axios": "^0.27.2",
+    "dayjs": "^1.11.3",
     "dotenv": "^16.0.1",
     "ts-node": "^10.7.0"
   }
