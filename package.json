@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sh ./scripts/build.sh",
-    "build:ts": "ts-node ./scripts/esbuild.ts",
-    "dev": "sh ./scripts/build.sh && cross-env NODE_ENV=test node -r dotenv/config dist/main.js",
-    "zip:main": "sh ./scripts/build.sh && sh ./scripts/main-zip.sh",
-    "zip:webhook": "sh ./scripts/build.sh && sh ./scripts/webhook-zip.sh"
+    "build": "ts-node ./esbuild.ts",
+    "dev": "ts-node ./esbuild.ts && cross-env NODE_ENV=test node -r dotenv/config dist/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,12 +21,10 @@
   ],
   "bundledDependencies": [
     "axios",
-    "dayjs",
     "dotenv"
   ],
   "dependencies": {
     "axios": "^0.27.2",
-    "dayjs": "^1.11.2",
     "dotenv": "^16.0.1",
     "ts-node": "^10.7.0"
   }
