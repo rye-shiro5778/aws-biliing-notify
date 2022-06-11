@@ -1,0 +1,36 @@
+{
+  "name": "mylinebot_prj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sh ./scripts/build.sh",
+    "build:ts": "ts-node ./scripts/esbuild.ts",
+    "dev": "sh ./scripts/build.sh && cross-env NODE_ENV=test node -r dotenv/config dist/main.js",
+    "zip:main": "sh ./scripts/build.sh && sh ./scripts/main-zip.sh",
+    "zip:webhook": "sh ./scripts/build.sh && sh ./scripts/webhook-zip.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.33",
+    "cross-env": "^7.0.3",
+    "esbuild": "0.14.39",
+    "npm-pack-zip": "^1.3.0",
+    "typescript": "^4.6.4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "bundledDependencies": [
+    "axios",
+    "dayjs",
+    "dotenv"
+  ],
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.2",
+    "dotenv": "^16.0.1",
+    "ts-node": "^10.7.0"
+  }
+}
