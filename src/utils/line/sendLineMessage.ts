@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { LineData } from "./lineTypes";
 
-export const sendLineMsg = async (lineData: LineData): Promise<void> => {
+export const sendLineMessage = async (lineData: LineData): Promise<void> => {
     const { type: endpoint, ...data } = lineData;
     const LINE_TOKEN = process.env["LINE_TOKEN"];
 
@@ -22,7 +22,7 @@ export const sendLineMsg = async (lineData: LineData): Promise<void> => {
             throw new Error(`${response.status}エラー`);
         }
         return;
-    } catch (e) {
-        throw e;
+    } catch (err) {
+        throw err;
     }
 };
