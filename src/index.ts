@@ -31,7 +31,7 @@ export const handler = async () => {
         notificationDisabled: true,
     };
 
-    sendLineMessage(lineData);
+    await sendLineMessage(lineData);
 };
 
 if (process.env.NODE_ENV === "test") {
